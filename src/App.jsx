@@ -1,8 +1,12 @@
 import { Header } from "./components/common";
 import {
   AboutUsSection,
+  BrandSection,
   ClientSection,
   HeroSection,
+  ServiceSection,
+  TeamSection,
+  WhyChooseUsSection,
 } from "./components/homepage";
 
 function App() {
@@ -10,8 +14,12 @@ function App() {
     <>
       <Header />
       <HeroSection />
-      <ClientSection />
+      <BrandSection />
       <AboutUsSection />
+      <ServiceSection />
+      <WhyChooseUsSection />
+      <ClientSection />
+      <TeamSection />
       Hello
     </>
   );

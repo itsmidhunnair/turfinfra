@@ -12,7 +12,7 @@ const AboutUs = () => {
         <p className="text-5xl font-semibold uppercase text-gray-700">
           About Us
         </p>
-        <div className="w-28 h-1 bg-secondary"></div>
+        <div className="mt-2 w-28 h-1 bg-secondary"></div>
         <div className="mt-5">
           <p>
             Welcome to <b>Turfinfra</b>, a distinguished construction company
@@ -28,7 +28,9 @@ const AboutUs = () => {
             Work, Excavation, Machinery Hire, All Types of Construction Work,
             Housing Small Bungalow Work, and Material and Labor Rate Services
           </p>
-          <button className="bg-secondary mt-5 text-white px-4 py-2 rounded">Learn More</button>
+          <button className="bg-secondary mt-5 text-white px-4 py-2 rounded">
+            Learn More
+          </button>
         </div>
       </div>
     </div>

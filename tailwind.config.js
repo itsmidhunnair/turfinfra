@@ -8,7 +8,7 @@ export default {
         secondary: "#e28327",
       },
       backgroundImage: {
-        "hero-image": "url('./src/assets/images/hero-image.jpg')",
+        "hero-image": "url('/src/assets/images/hero-image.jpg')",
       },
     },
   },
