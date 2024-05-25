@@ -20,7 +20,6 @@ function App() {
       <WhyChooseUsSection />
       <ClientSection />
       <TeamSection />
-      Hello
     </>
   );
 }

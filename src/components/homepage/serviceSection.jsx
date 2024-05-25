@@ -45,7 +45,7 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <div className="bg-gray-100 w-full mt-16 p-16">
+    <div className="bg-gray-100 w-full p-16">
       <div>
         <p className="text-5xl font-semibold uppercase text-center text-gray-700">
           Our Exclusive Services

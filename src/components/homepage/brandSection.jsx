@@ -6,7 +6,7 @@ const brandSection = () => {
     "https://saraswaticonstruction.com/wp-content/uploads/2020/01/brand_04.png",
   ];
   return (
-    <div className="flex justify-evenly py-16">
+    <div className="flex justify-evenly py-16 bg-white">
       {images.map((img) => (
         <img key={img} alt="client" className="w-20 aspect-auto" src={img} />
       ))}

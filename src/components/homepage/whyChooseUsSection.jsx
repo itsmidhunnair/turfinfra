@@ -35,13 +35,13 @@ const services = [
 
 const WhyChooseUsSection = () => {
   return (
-    <div className="w-full p-16">
+    <div className="w-full p-16 bg-gray-900/40 backdrop-blur-md">
       <div>
-        <p className="text-5xl font-semibold uppercase text-center text-gray-700">
+        <p className="text-5xl font-semibold uppercase text-center text-white">
           Why Choose Us?
         </p>
-        <div className="mt-2 w-28 h-1 bg-secondary mx-auto"></div>
-        <p className="text-center px-32 mt-8 text-lg text-gray-500">
+        <div className="mt-2 w-28 h-1 bg-white mx-auto"></div>
+        <p className="text-center px-32 mt-8 text-lg text-gray-100">
           Choosing us means choosing a construction partner with a proven track
           record of success. When you choose us, you choose a construction
           company that values your vision, prioritizes your needs.

@@ -23,7 +23,7 @@ const services = [
 
 const ClientSection = () => {
   return (
-    <div className="bg-gray-100 w-full p-16">
+    <div className="bg-white w-full p-16">
       <div>
         <p className="text-5xl font-semibold uppercase text-center text-gray-700">
           Our Clients
