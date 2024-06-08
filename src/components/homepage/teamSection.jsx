@@ -1,3 +1,4 @@
+import { SectionTitle, SectionWrapper } from "../common";
 import { DummyIcon } from "../icons";
 
 const services = [
@@ -14,22 +15,17 @@ const services = [
 
 const ClientSection = () => {
   return (
-    <div className="bg-gray-100 w-full p-16">
-      <div>
-        <p className="text-5xl font-semibold uppercase text-center text-gray-700">
-          Our Team
-        </p>
-        <div className="mt-2 w-28 h-1 bg-secondary mx-auto"></div>
-        <p className="text-center px-32 mt-8 text-lg text-gray-500">
-          Meet our team is the driving force behind the success of our project.
-          Comprising experienced architects, skilled engineers, meticulous
-          project managers, and proficient craftmen.
-        </p>
-      </div>
+    <SectionWrapper bgType="secondary" id="teams">
+      <SectionTitle title="Our Team" center />
+      <p className="text-center px-32 mt-8 text-lg text-gray-500 max-sm:px-0 max-sm:text-justify">
+        Meet our team is the driving force behind the success of our project.
+        Comprising experienced architects, skilled engineers, meticulous project
+        managers, and proficient craftmen.
+      </p>
 
       <div className="overflow-auto snap-x flex gap-8 justify-center mt-8 pb-8">
         {services.map((service) => (
-          <div className="min-w-72 snap-center" key={service.image}>
+          <div className="min-w-72 snap-center " key={service.image}>
             <ServiceCard
               image={service.image}
               title={service.title}
@@ -43,7 +39,7 @@ const ClientSection = () => {
           Learn More
         </button>
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 

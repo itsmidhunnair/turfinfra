@@ -1,3 +1,5 @@
+import { SectionTitle, SectionWrapper } from "../common";
+
 const services = [
   {
     image:
@@ -45,23 +47,20 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <div className="bg-gray-100 w-full p-16">
+    <SectionWrapper bgType="secondary" id="services">
       <div>
-        <p className="text-5xl font-semibold uppercase text-center text-gray-700">
-          Our Exclusive Services
-        </p>
-        <div className="mt-2 w-28 h-1 bg-secondary mx-auto"></div>
-        <p className="text-center px-32 mt-8 text-lg text-gray-500">
+        <SectionTitle title={"Our Exclusive Services"} center />
+        <p className="text-center px-32 mt-8 text-lg text-gray-500 max-sm:px-0 max-sm:text-justify">
           As a leading construction company, our wide range of services is
-          tailored to meet the unique needs of our clients. . We are specialized
+          tailored to meet the unique needs of our clients. We are specialized
           in commercial builds, residential developments, or specialized
           construction projects.
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-8 justify-center mt-8">
+      <div className="flex flex-wrap gap-8 justify-center mt-8 max-sm:flex-col">
         {services.map((service) => (
-          <div className="w-1/3" key={service.image}>
+          <div className="w-1/3 max-sm:w-full" key={service.image}>
             <ServiceCard
               image={service.image}
               title={service.title}
@@ -75,7 +74,7 @@ const ServiceSection = () => {
           Learn More
         </button>
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 
@@ -83,7 +82,7 @@ export default ServiceSection;
 
 const ServiceCard = ({ image, alt = "service_card", title, detail }) => {
   return (
-    <div className="w-full h-full flex items-center bg-white gap-8">
+    <div className="w-full h-full flex items-center bg-white gap-8 ">
       <img
         src={image}
         alt={alt}

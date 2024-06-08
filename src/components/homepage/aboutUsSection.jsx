@@ -1,20 +1,18 @@
 import AboutImg from "../../assets/images/about-us.jpg";
+import { SectionTitle, SectionWrapper } from "../common";
 
 const AboutUs = () => {
   return (
-    <div className="bg-white p-16">
-      <div className="flex w-3/4 mx-auto gap-16">
+    <SectionWrapper id="about-us">
+      <div className="flex w-3/4 mx-auto gap-16 max-sm:gap-8 max-sm:flex-col max-sm:w-full">
         <img
           src={AboutImg}
           alt="about"
-          className="w-1/2 border-b-8 border-l-8 border-secondary"
+          className="w-1/2 border-b-8 border-l-8 border-secondary max-sm:w-full"
         />
         <div className="w-full">
-          <p className="text-5xl font-semibold uppercase text-gray-700">
-            About Us
-          </p>
-          <div className="mt-2 w-28 h-1 bg-secondary"></div>
-          <div className="mt-5">
+          <SectionTitle title="About Us" />
+          <div className="mt-5 text-justify">
             <p>
               Welcome to <b>Turfinfra</b>, a distinguished construction company
               that stands at the forefront of the industry, embodying a
@@ -37,7 +35,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 

@@ -2,7 +2,7 @@ import { FacebookIcon, InstagramIcon, MailIcon } from "../../icons";
 
 const TopHeader = () => {
   return (
-    <div className="bg-gray-800 flex items-center justify-between text-white w-full py-2 px-16">
+    <div className="bg-gray-800 flex items-center justify-between text-white w-full py-2 px-16 max-sm:hidden">
       <div className="flex gap-4">
         <div>
           <div className="inline-block w-5">

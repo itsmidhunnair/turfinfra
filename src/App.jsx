@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/common";
 import {
   AboutUsSection,
@@ -11,7 +12,7 @@ import {
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
       <HeroSection />
       <BrandSection />
@@ -20,7 +21,7 @@ function App() {
       <WhyChooseUsSection />
       <ClientSection />
       <TeamSection />
-    </>
+    </BrowserRouter>
   );
 }
 

@@ -1,3 +1,4 @@
+import { SectionTitle, SectionWrapper } from "../common";
 import { DummyIcon } from "../icons";
 
 const services = [
@@ -35,22 +36,19 @@ const services = [
 
 const WhyChooseUsSection = () => {
   return (
-    <div className="w-full p-16 bg-gray-900/40 backdrop-blur-md">
+    <SectionWrapper bgType="blur" id="projects">
       <div>
-        <p className="text-5xl font-semibold uppercase text-center text-white">
-          Why Choose Us?
-        </p>
-        <div className="mt-2 w-28 h-1 bg-white mx-auto"></div>
-        <p className="text-center px-32 mt-8 text-lg text-gray-100">
+        <SectionTitle title="Why Choose Us?" center color="light" />
+        <p className="text-center px-32 mt-8 text-lg text-gray-100 max-sm:px-0 max-sm:text-justify">
           Choosing us means choosing a construction partner with a proven track
           record of success. When you choose us, you choose a construction
           company that values your vision, prioritizes your needs.
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-8 justify-center mt-8">
+      <div className="flex flex-wrap gap-8 justify-center mt-8 max-sm:flex-col">
         {services.map((service) => (
-          <div className="w-1/4" key={service.image}>
+          <div className="w-1/4 max-sm:w-full" key={service.image}>
             <ServiceCard
               image={service.image}
               title={service.title}
@@ -64,7 +62,7 @@ const WhyChooseUsSection = () => {
           Learn More
         </button>
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 

@@ -1,32 +1,33 @@
-import TopHeader from "./topHeader";
-import Logo from "../../../assets/images/logo.jpg";
 import { useState } from "react";
+import Logo from "../../../assets/images/logo.png";
 import { HamburgerIcon } from "../../icons";
-import { Link, useLocation } from "react-router-dom";
+import TopHeader from "./topHeader";
 
 const Header = () => {
   const [openNavbar, setOpenNavbar] = useState(false);
 
-  const { hash } = useLocation();
-
   const navLinks = [
-    ["Home", "#home"],
-    ["About Us", "#about-us"],
-    ["Services", "#services"],
-    ["Projects", "#projects"],
-    ["Clients", "#clients"],
-    ["Contact Us", "#contact-us"],
+    "Home",
+    "About Us",
+    "Services",
+    "Projects",
+    "Clients",
+    "Contact Us",
   ];
 
   return (
     <div className="sticky top-0 z-10">
       <TopHeader />
       <div
-        className="px-16 bg-white
-       text-primary flex justify-between items-center shadow-lg max-sm:flex-row-reverse max-sm:px-6 "
+        className="px-16 py-4 bg-white
+        text-gray-500 border-b-2 border-primary flex justify-between shadow-lg max-sm:flex-row-reverse max-sm:px-6"
       >
-        <div>
-          <img src={Logo} alt="logo" className="w-24" />
+        <div className="relative w-24 animate-introLogo max-sm:w-16">
+          <img
+            src={Logo}
+            alt="logo"
+            className="w-full -top-4 h-auto absolute drop-shadow-md"
+          />
         </div>
         <button
           onClick={() => setOpenNavbar(!openNavbar)}
@@ -39,16 +40,13 @@ const Header = () => {
             openNavbar ? "max-sm:w-52" : "max-sm:w-0"
           }`}
         >
-          {navLinks.map(([text, link]) => (
-            <a
-              href={`${link}`}
-              className={`hover:text-secondary cursor-pointer max-sm:ml-6 ${
-                hash === link ? "text-secondary" : ""
-              }`}
+          {navLinks.map((link) => (
+            <div
+              className="hover:text-primary cursor-pointer max-sm:ml-6"
               key={link}
             >
-              {text}
-            </a>
+              {link}
+            </div>
           ))}
         </div>
       </div>

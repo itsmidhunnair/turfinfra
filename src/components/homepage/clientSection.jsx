@@ -1,4 +1,8 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { SectionTitle, SectionWrapper } from "../common";
 import { DummyIcon } from "../icons";
+import { Scrollbar } from "swiper/modules";
+import "swiper/css/scrollbar";
 
 const services = [
   {
@@ -23,36 +27,57 @@ const services = [
 
 const ClientSection = () => {
   return (
-    <div className="bg-white w-full p-16">
+    <SectionWrapper id="clients">
       <div>
-        <p className="text-5xl font-semibold uppercase text-center text-gray-700">
-          Our Clients
-        </p>
-        <div className="mt-2 w-28 h-1 bg-secondary mx-auto"></div>
-        <p className="text-center px-32 mt-8 text-lg text-gray-500">
+        <SectionTitle title="Our Clients" center />
+        <p className="text-center px-32 mt-8 text-lg text-gray-500 max-sm:px-0 max-sm:text-justify">
           Our clients are the cornerstone of our success, and their satisfaction
           is our ultimate goal. We take pride in establishing lasting
           partnerships built on trust, transparency, and mutual respect.
         </p>
       </div>
 
-      <div className="overflow-auto snap-x flex gap-8 justify-center mt-8 pb-8">
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={25}
+        scrollbar={{
+          hide: true,
+        }}
+        modules={[Scrollbar]}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 3,
+          },
+          940: {
+            slidesPerView: 4,
+          },
+        }}
+        navigation
+        centeredSlidesBounds
+        className="container mx-auto"
+        loop
+        autoplay
+      >
         {services.map((service) => (
-          <div className="min-w-72 snap-center" key={service.image}>
+          <SwiperSlide key={service.image}>
             <ServiceCard
               image={service.image}
               title={service.title}
               detail={service.detail}
             />
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
       <div className="flex justify-center">
         <button className="bg-secondary mt-5 text-white px-4 py-2 rounded ">
           Learn More
         </button>
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 
